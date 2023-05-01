@@ -1,5 +1,5 @@
 name: 4. Build Loop
-run-name: Build Loop
+run-name: Build Loop ${{ github.ref_name }}
 on:
   schedule:
     # Runs "At 11:00 on every day-of-week from Monday through Friday"
