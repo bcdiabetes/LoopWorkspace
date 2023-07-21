@@ -63,6 +63,11 @@ platform :ios do
         "com.#{TEAMID}.loopkit.Patched.Loop.SmallStatusWidget"
       ]
     )
+    update_app_identifier(
+      xcodeproj: "/Users/runner/work/LoopWorkspace/LoopWorkspace/Loop/Loop.xcodeproj",  # Replace with your Xcode project path
+      plist_path: "/Users/runner/work/LoopWorkspace/LoopWorkspace/Loop/Info.plist",  # Replace with your Info.plist path
+      app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop"  # Replace with your new Bundle Identifier
+    )
 
     previous_build_number = latest_testflight_build_number(
       app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop",
