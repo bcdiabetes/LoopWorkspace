@@ -110,19 +110,11 @@ platform :ios do
       plist_path: "#{GITHUB_WORKSPACE}/Loop/WatchApp/Info.plist",  # Replace with your Info.plist path
       app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop.LoopWatch"  # Replace with your new Bundle Identifier
     )
-    update_app_group_identifiers(
-      entitlements_file: "#{GITHUB_WORKSPACE}/Loop/WatchApp/WatchApp.entitlements",
-      app_group_identifiers: ["com.#{TEAMID}.loopkit.Patched.Loop"]
-    )
     # WatchApp Extension
     update_app_identifier(
       xcodeproj: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",  # Replace with your Xcode project path
       plist_path: "#{GITHUB_WORKSPACE}/Loop/WatchApp Extension/Info.plist",  # Replace with your Info.plist path
       app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop.LoopWatch.watchkitextension"  # Replace with your new Bundle Identifier
-    )
-    update_app_group_identifiers(
-      entitlements_file: "#{GITHUB_WORKSPACE}/Loop/WatchApp Extension/WatchApp Extension.entitlements",
-      app_group_identifiers: ["com.#{TEAMID}.loopkit.Patched.Loop"]
     )
 
     previous_build_number = latest_testflight_build_number(
