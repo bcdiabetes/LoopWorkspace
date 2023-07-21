@@ -64,8 +64,8 @@ platform :ios do
       ]
     )
     update_app_identifier(
-      xcodeproj: "/Users/runner/work/LoopWorkspace/LoopWorkspace/Loop/Loop.xcodeproj",  # Replace with your Xcode project path
-      plist_path: "/Users/runner/work/LoopWorkspace/LoopWorkspace/Loop/Info.plist",  # Replace with your Info.plist path
+      xcodeproj: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",  # Replace with your Xcode project path
+      plist_path: "#{GITHUB_WORKSPACE}/Loop/Info.plist",  # Replace with your Info.plist path
       app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop"  # Replace with your new Bundle Identifier
     )
 
