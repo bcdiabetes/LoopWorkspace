@@ -63,10 +63,42 @@ platform :ios do
         "com.#{TEAMID}.loopkit.Patched.Loop.SmallStatusWidget"
       ]
     )
+    Project_Path = "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj"
+    # Loop
     update_app_identifier(
-      xcodeproj: "#{GITHUB_WORKSPACE}/Loop/Loop.xcodeproj",  # Replace with your Xcode project path
+      xcodeproj: #{Project_Path},  # Replace with your Xcode project path
       plist_path: "#{GITHUB_WORKSPACE}/Loop/Loop/Info.plist",  # Replace with your Info.plist path
       app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop"  # Replace with your new Bundle Identifier
+    )
+    # Loop Intent Extension
+    update_app_identifier(
+      xcodeproj: #{Project_Path},  # Replace with your Xcode project path
+      plist_path: "#{GITHUB_WORKSPACE}/Loop/Loop Intent Extension/Info.plist",  # Replace with your Info.plist path
+      app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop.Loop-Intent-Extension"  # Replace with your new Bundle Identifier
+    )
+    # Loop Status Extension
+    update_app_identifier(
+      xcodeproj: #{Project_Path},  # Replace with your Xcode project path
+      plist_path: "#{GITHUB_WORKSPACE}/Loop/Loop Status Extension/Info.plist",  # Replace with your Info.plist path
+      app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop.statuswidget"  # Replace with your new Bundle Identifier
+    )
+    # Small Status Widget
+    update_app_identifier(
+      xcodeproj: #{Project_Path},  # Replace with your Xcode project path
+      plist_path: "#{GITHUB_WORKSPACE}/Loop/StatusWidget/Info.plist",  # Replace with your Info.plist path
+      app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop.SmallStatusWidget"  # Replace with your new Bundle Identifier
+    )
+    # WatchApp
+    update_app_identifier(
+      xcodeproj: #{Project_Path},  # Replace with your Xcode project path
+      plist_path: "#{GITHUB_WORKSPACE}/Loop/WatchApp/Info.plist",  # Replace with your Info.plist path
+      app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop.LoopWatch"  # Replace with your new Bundle Identifier
+    )
+    # WatchApp Extension
+    update_app_identifier(
+      xcodeproj: #{Project_Path},  # Replace with your Xcode project path
+      plist_path: "#{GITHUB_WORKSPACE}/Loop/WatchApp Extension/Info.plist",  # Replace with your Info.plist path
+      app_identifier: "com.#{TEAMID}.loopkit.Patched.Loop.LoopWatch.watchkitextension"  # Replace with your new Bundle Identifier
     )
 
     previous_build_number = latest_testflight_build_number(
