@@ -38,7 +38,6 @@ jobs:
           dexcom_sage \
           dexcom_upload_readings \
           future_carbs_4h \
-          override_sens \
           limit_loop_cycle_time \
           2002 
 
