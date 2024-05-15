@@ -1,12 +1,7 @@
-APP_DISPLAY_NAME = iAPS
-APP_VERSION = 4.0.3
-APP_BUILD_NUMBER = 1
-COPYRIGHT_NOTICE =
+APP_DISPLAY_NAME = Loop
 DEVELOPER_TEAM = ##TEAM_ID##
-BUNDLE_IDENTIFIER = com.FreeAPS.X.NextGen
+BUNDLE_IDENTIFIER = com.${DEVELOPMENT_TEAM}.Patched.loopkit.Loop
 APP_GROUP_ID = group.com.$(DEVELOPMENT_TEAM).loopkit.LoopGroup
-APP_ICON = pod_colorful
-APP_URL_SCHEME = freeaps-x
 
 #include? "ConfigOverride.xcconfig"
 //#include? "../../ConfigOverride.xcconfig"
