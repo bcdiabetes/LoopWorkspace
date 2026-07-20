@@ -144,10 +144,8 @@ platform :ios do
       skip_submission: false,
       ipa: "Loop.ipa",
       changelog: "Monthly Update",
-      distribute_external: true,
-      groups: [
-        "External Testers"
-      ],
+      distribute_external: false,
+      groups: [],
       skip_waiting_for_build_processing: false,
     )
   end
