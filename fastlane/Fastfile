@@ -146,7 +146,8 @@ platform :ios do
       changelog: "Monthly Update",
       distribute_external: true,
       groups: [
-        "External Testers"
+        "External Testers",
+        "Saskatchewan Provincial Pediatric Endocrinology"
       ],
       skip_waiting_for_build_processing: false,
     )
